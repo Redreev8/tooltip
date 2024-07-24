@@ -1,0 +1,95 @@
+$indentation: 16px
+$bg: #373D3F
+$color: #FFFFFF
+
+body
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 100vw
+    height: 100vh
+    margin: 0
+    padding: 0
+
+.tool
+    background-color: red
+    width: 600px
+    height: 600px
+
+.tooltip
+    max-width: 100px
+    color: $color
+    position: absolute
+    background-color: $bg
+    padding: $indentation
+    opacity: 0
+    transition: opacity .6s 0s
+    &--active
+        opacity: 1
+    &::before
+        content: ''
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%)
+        position: absolute
+        background-color: $bg
+        width: $indentation
+        height: 8px
+    &--top
+        &::before
+            bottom: 0
+            left: 50%
+            transform: translate(-50%, 93%) rotate(180deg)
+        &-start
+            &::before
+                left: $indentation
+                bottom: 0
+                transform: translateY(93%) rotate(180deg)
+        &-end
+            &::before
+                right: $indentation
+                bottom: 0
+                transform: translateY(93%) rotate(180deg)
+    &--left
+        &::before
+            top: 50%
+            right: 0
+            transform: translate(75%, -50%) rotate(90deg)
+        &-start
+            &::before
+                top: $indentation
+                right: 0
+                transform: translateX(75%) rotate(90deg)
+        &-end
+            &::before
+                right: 0
+                bottom: $indentation
+                transform: translateX(75%) rotate(90deg)
+    &--right
+        &::before
+            top: 50%
+            left: 0
+            transform: translate(-75%, -50%) rotate(270deg)
+        &-start
+            &::before
+                top: $indentation
+                left: 0
+                transform: translateX(-75%) rotate(270deg)
+        &-end
+            &::before
+                left: 0
+                bottom: $indentation
+                transform: translateX(-75%) rotate(270deg)
+    &--bottom
+        &::before
+            top: 0
+            left: 50%
+            transform: translate(-50%, -93%)
+        &-start
+            &::before
+                top: 0
+                left: $indentation
+                transform: translateY(-93%)
+        &-end
+            &::before
+                top: 0
+                right: $indentation
+                transform: translateY(-93%)
