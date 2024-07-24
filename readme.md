@@ -29,6 +29,6 @@ classLis: {
 ```
 append(): inserts into box
 hide(isRemove: boolean): hides the tooltip, 
-  - props **isRemove** if there are true then it tooltip be deleted after the animations
+  - props isRemove if there are true then it tooltip be deleted after the animations
 remove(): remove from HTMLDom
 ```
