@@ -24,8 +24,7 @@
 }
 
 ## Metods
-
 - append: inserts into box
 - hide: hides the tooltip, 
-    - props isRemove if there are true then it tooltip be deleted after the animations
+    - props **isRemove** if there are true then it tooltip be deleted after the animations
 - remove: remove from HTMLDom
