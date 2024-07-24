@@ -2,12 +2,12 @@
 
 ## Props
 ```
-- content: string | HTMLElement | () => HTMLElement, 
-- element: HTMLElement, 
-- positionFlag: 'start' | 'center' | 'end', 
-- isAnimate: boolean 
-- placement: 'top' | 'left' | 'right' | 'bottom'
-- classLis: {
+content: string | HTMLElement | () => HTMLElement, 
+element: HTMLElement, 
+positionFlag: 'start' | 'center' | 'end', 
+isAnimate: boolean 
+placement: 'top' | 'left' | 'right' | 'bottom'
+classLis: {
     tooltip: 'tooltip',
     active: 'tooltip--active',
     'top-center': 'tooltip--top',
@@ -27,8 +27,8 @@
 
 ## Metods
 ```
-- append(): inserts into box
-- hide(): hides the tooltip, 
-    - props **isRemove** if there are true then it tooltip be deleted after the animations
-- remove(isRemove: boolean): remove from HTMLDom
+append(): inserts into box
+hide(isRemove: boolean): hides the tooltip, 
+  - props **isRemove** if there are true then it tooltip be deleted after the animations
+remove(): remove from HTMLDom
 ```
