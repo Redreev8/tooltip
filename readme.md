@@ -1,6 +1,7 @@
 # Toltip
 
 ## Props
+```
 - content: string | HTMLElement | () => HTMLElement, 
 - element: HTMLElement, 
 - positionFlag: 'start' | 'center' | 'end', 
@@ -22,9 +23,12 @@
     'bottom-start': 'tooltip--bottom-start',
     'bottom-end': 'tooltip--bottom-end',
 }
+```
 
 ## Metods
-- append: inserts into box
-- hide: hides the tooltip, 
+```
+- append(): inserts into box
+- hide(): hides the tooltip, 
     - props **isRemove** if there are true then it tooltip be deleted after the animations
-- remove: remove from HTMLDom
+- remove(isRemove: boolean): remove from HTMLDom
+```
